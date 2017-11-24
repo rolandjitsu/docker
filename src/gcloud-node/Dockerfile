@@ -16,7 +16,22 @@ RUN apk update && \
     apk add --update-cache yarn==${YARN_VERSION} \
         --repository http://nl.alpinelinux.org/alpine/edge/community
 
+# Chrome
+# See http://pkgs.alpinelinux.org/packages?name=chromium for available versions
+# TODO: Try to make the image a bit slimmer
+ENV CHROMIUM_VERSION 61.0.3163.100-r0
+RUN apk update && \
+    apk add --update-cache \
+    --repository http://nl.alpinelinux.org/alpine/edge/main \
+    libwebp \
+    harfbuzz
+RUN apk update && \
+    apk add --update-cache \
+        --repository http://nl.alpinelinux.org/alpine/edge/community \
+        chromium==${CHROMIUM_VERSION}
+
 # Check binaries
+RUN echo "Chromium $(chromium-browser --product-version)"
 RUN echo "gcloud $(gcloud --version)"
 RUN echo "node $(node --version)"
 RUN echo "npm $(npm --version)"

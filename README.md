@@ -12,6 +12,13 @@ Within this repo, the following images can be found:
 
 ### Contribute
 --------------
+You can either use:
+```bash
+./scripts/push.sh <image name> <image path> <image version>
+```
+
+Or:
+
 1. Just add the image under `./src`
 2. Build it
 ```bash

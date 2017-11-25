@@ -5,6 +5,8 @@
 
 ### Usage
 ---------
+This image also provides a [Yarn](https://yarnpkg.com) binary.
+
 ```dockerfile
 FROM rolandjitsu/gcloud-node
 

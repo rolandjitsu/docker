@@ -19,16 +19,16 @@ RUN apk -U --no-cache add nodejs==${NODE_VERSION}
 ENV YARN_VERSION 1.3.2-r0
 RUN apk -U --no-cache add yarn==${YARN_VERSION}
 
-# Chrome
+# Chromium
 # See http://pkgs.alpinelinux.org/packages?name=chromium for available versions
 ENV CHROMIUM_VERSION 61.0.3163.100-r0
 RUN apk -U --no-cache add libwebp \
     harfbuzz \
     chromium==${CHROMIUM_VERSION}
 
-# Set Chrome binary path
-ENV CHROME_BIN=/usr/bin/chromium-browser
-ENV CHROME_PATH=/usr/lib/chromium/
+# Set Chromium binary path
+ENV CHROMIUM_BIN=/usr/bin/chromium-browser
+ENV CHROMIUM_PATH=/usr/lib/chromium/
 
 # Minimize image size
 RUN apk del --purge --force linux-headers \

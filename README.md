@@ -12,6 +12,8 @@ Within this repo, the following images can be found:
 
 ### Contribute
 --------------
+Use [fromlatest.io](https://www.fromlatest.io) to make sure the image has no problems (or just to improve it).
+
 1. Just add the image under `./src`
 2. And use the following script to push the image to the Docker [registry](https://hub.docker.com):
 ```bash

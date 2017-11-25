@@ -1,11 +1,14 @@
 # GCloud & Node
 
-> Alpine image with [gcloud](https://cloud.google.com/sdk/gcloud), [node](https://nodejs.org) and [Chromium](https://www.chromium.org/Home).
+> Alpine image with [gcloud](https://cloud.google.com/sdk/gcloud) and [node](https://nodejs.org).
 
 
 ### Usage
 ---------
-This image also provides a [Yarn](https://yarnpkg.com) binary.
+Besides [gcloud](https://cloud.google.com/sdk/gcloud) and [node](http://pkgs.alpinelinux.org/packages?name=nodejs), this image also provides latest available binaries for:
+
+* [Yarn](https://yarnpkg.com)
+* [Chromium](http://pkgs.alpinelinux.org/packages?name=chromium)
 
 Pull the image and ssh into the container:
 ```bash

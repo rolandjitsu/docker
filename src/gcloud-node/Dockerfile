@@ -7,6 +7,10 @@ RUN echo "http://dl-2.alpinelinux.org/alpine/edge/main" > /etc/apk/repositories
 RUN echo "http://dl-2.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories
 RUN echo "http://dl-2.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories
 
+# JDK
+# See http://pkgs.alpinelinux.org/packages?name=openjdk8-jre for available versions
+RUN apk -U --no-cache add openjdk8-jre
+
 # Node
 # See http://pkgs.alpinelinux.org/packages?name=nodejs for available versions
 # NOTE: Latest node is only available on the @edge branch,

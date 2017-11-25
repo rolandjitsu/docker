@@ -7,6 +7,12 @@
 ---------
 This image also provides a [Yarn](https://yarnpkg.com) binary.
 
+Pull the image and ssh into the container:
+```bash
+docker run -ti --rm --entrypoint bash rolandjitsu/gcloud-node
+```
+
+Or use it as a base image:
 ```dockerfile
 FROM rolandjitsu/gcloud-node
 

@@ -1,5 +1,7 @@
 FROM google/cloud-sdk:alpine
 
+LABEL maintainer="rolandjitsu@gmail.com"
+
 # Node
 # See http://pkgs.alpinelinux.org/packages?name=nodejs for available versions
 # NOTE: Latest node is only available on the @edge branch,

@@ -7,10 +7,6 @@ RUN echo "http://dl-2.alpinelinux.org/alpine/edge/main" > /etc/apk/repositories
 RUN echo "http://dl-2.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories
 RUN echo "http://dl-2.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories
 
-# JDK
-# See http://pkgs.alpinelinux.org/packages?name=openjdk8-jre for available versions
-RUN apk -U --no-cache add openjdk8-jre
-
 # Node
 # See http://pkgs.alpinelinux.org/packages?name=nodejs for available versions
 # NOTE: Latest node is only available on the @edge branch,
@@ -26,8 +22,9 @@ RUN apk -U --no-cache add yarn
 RUN apk -U --no-cache add chromium \
     chromium-chromedriver
 
-# Set Chromium binary path
+# Set Chromium binary paths
 ENV CHROMIUM_BIN=/usr/bin/chromium-browser
+ENV CHROMEDRIVER_BIN=/usr/bin/chromedriver
 ENV CHROMIUM_PATH=/usr/lib/chromium
 
 # Minimize image size

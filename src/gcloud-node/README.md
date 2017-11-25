@@ -1,6 +1,6 @@
 # GCloud & Node
 
-> Alpine image with [gcloud](https://cloud.google.com/sdk/gcloud) and [node](https://nodejs.org)
+> Alpine image with [gcloud](https://cloud.google.com/sdk/gcloud), [node](https://nodejs.org) and [Chromium](https://www.chromium.org/Home).
 
 
 ### Usage

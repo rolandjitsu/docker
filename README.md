@@ -1,6 +1,6 @@
 # Docker Images
 
-> A collection of usefuly [Docker](https://www.docker.com) images.
+> A collection of useful [Docker](https://www.docker.com) images.
 
 
 ### Images
@@ -12,23 +12,25 @@ Within this repo, the following images can be found:
 
 ### Contribute
 --------------
-You can either use:
+1. Just add the image under `./src`
+2. And use the following script to push the image to the Docker [registry](https://hub.docker.com):
 ```bash
 ./scripts/push.sh <image name> <image path> <image version>
 ```
 
-Or:
+**NOTE**: The script will push the version tag and the `latest` tag.
 
-1. Just add the image under `./src`
-2. Build it
+Alternatively you can manually build and push:
+1. Build it
 ```bash
 docker build -t rolandjitsu/<image name>:<tag> ./src/<image name>
 ```
-3. Login
-```bash
-docker login
-```
-4. Push it
+2. Push it
 ```bash
 docker push rolandjitsu/<image name>:<tag>
+```
+
+**NOTE**: Don't forget to login:
+```bash
+docker login
 ```

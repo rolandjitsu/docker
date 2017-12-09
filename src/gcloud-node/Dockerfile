@@ -8,14 +8,12 @@ RUN echo "http://dl-2.alpinelinux.org/alpine/edge/community" >> /etc/apk/reposit
 RUN echo "http://dl-2.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories
 
 # Node
-# See http://pkgs.alpinelinux.org/packages?name=nodejs for available versions
-# NOTE: Latest node is only available on the @edge branch,
-# hence the install from repo.
+# See http://pkgs.alpinelinux.org/packages?name=nodejs for available node versions
 RUN apk -U --no-cache add nodejs
 
-# Yarn
-# See http://pkgs.alpinelinux.org/packages?name=yarn for available versions
-RUN apk -U --no-cache add yarn
+# Make and C++ compiler
+# NOTE: This is here because some nodejs packages might require building using node-gyp
+RUN apk -U --no-cache add g++ make
 
 # Chromium
 # See http://pkgs.alpinelinux.org/packages?name=chromium for available versions

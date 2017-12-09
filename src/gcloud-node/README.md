@@ -7,8 +7,9 @@
 ---------
 Besides [gcloud](https://cloud.google.com/sdk/gcloud) and [node](http://pkgs.alpinelinux.org/packages?name=nodejs), this image also provides latest available binaries for:
 
-* [Yarn](https://yarnpkg.com)
 * [Chromium](http://pkgs.alpinelinux.org/packages?name=chromium)
+* [Make](http://pkgs.alpinelinux.org/packages?name=make)
+* [G++](http://pkgs.alpinelinux.org/packages?name=g%2B%2B)
 
 Pull the image and ssh into the container:
 ```bash
